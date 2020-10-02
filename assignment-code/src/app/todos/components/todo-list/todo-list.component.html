@@ -1,0 +1,10 @@
+<ul class="todo-list" *ngIf="todoList && todoList.length > 0">
+  <li *ngFor="let item of todoList; let indx = index" [ngClass]="{'completed': item.completed}">
+    <div class="view">
+      <input class="toggle" type="checkbox" (click)="updateTodo(indx)" checked />
+      <label>{{item.text}}</label>
+      <button class="destroy" (click)="removeTodo(indx)"></button>
+    </div>
+  </li>
+</ul>
+                        ``                      
